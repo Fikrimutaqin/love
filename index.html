@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Question</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #noBtn {
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <h2>Do you love me? 💖</h2>
+    <div class="buttons">
+        <button onclick="alert('Yay! ❤️')">Yes</button>
+        <button id="noBtn" onmouseover="moveButton()">No</button>
+    </div>
+    <script>
+        function moveButton() {
+            let button = document.getElementById('noBtn');
+            let x = Math.random() * (window.innerWidth - 100);
+            let y = Math.random() * (window.innerHeight - 50);
+            button.style.left = `${x}px`;
+            button.style.top = `${y}px`;
+        }
+    </script>
+</body>
+</html>
